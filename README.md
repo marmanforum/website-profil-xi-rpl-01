@@ -24,3 +24,15 @@ Programmer bisa menggunakan kode yang sudah tidak terbaru. Akibatnya, perubahan 
 3. Mengapa main harus dijaga agar tetap stabil?  
 Karena main biasanya menjadi versi utama proyek yang siap digunakan. Jika setiap programmer langsung memasukkan kode yang belum diuji ke main, bisa menyebabkan error dan mengganggu pekerjaan seluruh tim. Karena itu, fitur biasanya dikerjakan di branch masing-masing, diuji terlebih dahulu, baru digabungkan ke main.  
 
+## Pertanyaan Conflict  
+1. Mengapa conflict terjadi?  
+Conflict terjadi ketika dua programmer mengubah bagian/baris kode yang sama dengan perubahan yang berbeda, sehingga Git tidak bisa menentukan perubahan mana yang harus digunakan.  
+2. Apakah conflict berarti Git rusak?  
+Tidak. Conflict adalah hal normal dalam pengembangan software. Git justru memberi tahu bahwa ada perubahan yang perlu ditentukan secara manual.  
+3. Siapa yang harus menentukan versi kode yang benar?  
+Programmer atau tim yang bertanggung jawab terhadap kode tersebut yang menentukan versi mana yang benar, berdasarkan kebutuhan proyek dan hasil diskusi dengan anggota tim.  
+4. Mengapa komunikasi antar programmer penting?  
+Karena komunikasi membantu programmer menghindari perubahan yang bertabrakan, memahami pekerjaan anggota lain, dan menentukan solusi yang tepat ketika terjadi conflict.  
+
+## URL Repository  
+https://github.com/marmanforum/website-profil-xi-rpl-01.git  
