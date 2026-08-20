@@ -10,14 +10,14 @@
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 	<style>
 		:root {
-			--ink: #f4f7ff;
-			--muted: #aeb9d7;
-			--navy: #070c20;
-			--panel: rgba(17, 28, 72, 0.72);
-			--line: rgba(170, 188, 255, 0.18);
-			--cyan: #68e4f2;
-			--violet: #9c7cff;
-			--pink: #f18dca;
+			--ink: #f3f6ff;
+			--muted: #9da9c7;
+			--navy: #070b16;
+			--panel: rgba(17, 27, 55, 0.68);
+			--line: rgba(151, 177, 255, 0.17);
+			--cyan: #52c7ff;
+			--violet: #9c72ff;
+			--pink: #9c72ff;
 			--shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
 		}
 
@@ -29,7 +29,10 @@
 			min-width: 320px;
 			margin: 0;
 			color: var(--ink);
-			background: var(--navy);
+			background:
+				radial-gradient(circle at 10% 10%, rgba(52, 137, 255, 0.16), transparent 29rem),
+				radial-gradient(circle at 92% 82%, rgba(156, 114, 255, 0.12), transparent 25rem),
+				linear-gradient(135deg, #050812 0%, var(--navy) 48%, #0c1328 100%);
 			font-family: "DM Sans", sans-serif;
 			line-height: 1.6;
 			overflow-x: hidden;
@@ -40,9 +43,10 @@
 			inset: 0;
 			z-index: -3;
 			content: "";
-			background: radial-gradient(circle at 9% 10%, #33378c 0, transparent 34%),
-				radial-gradient(circle at 90% 33%, #173f6d 0, transparent 31%),
-				linear-gradient(135deg, #070c20 0%, #11164a 52%, #061b32 100%);
+			background-image: linear-gradient(rgba(132, 163, 241, 0.035) 1px, transparent 1px),
+				linear-gradient(90deg, rgba(132, 163, 241, 0.035) 1px, transparent 1px);
+			background-size: 46px 46px;
+			mask-image: linear-gradient(to bottom, black, transparent 78%);
 		}
 
 		body::after {
@@ -52,10 +56,7 @@
 			pointer-events: none;
 			content: "";
 			opacity: 0.18;
-			background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-				linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
-			background-size: 48px 48px;
-			mask-image: linear-gradient(to bottom, black, transparent 75%);
+			opacity: 0;
 		}
 
 		.blob {
@@ -71,9 +72,9 @@
 		.blob-two { top: 470px; right: -100px; width: 250px; height: 250px; background: #166c91; }
 
 		.site-header {
-			width: min(1120px, calc(100% - 40px));
+			width: min(100%, 1080px);
 			margin: 0 auto;
-			padding: 26px 0;
+			padding: 48px 0 0;
 			animation: rise-in .7s ease both;
 		}
 
@@ -309,6 +310,55 @@
 		@media (prefers-reduced-motion: reduce) {
 			*, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
 		}
+
+		/* Shared contact-page theme */
+		body {
+			color: #f3f6ff;
+			background:
+				radial-gradient(circle at 10% 10%, rgba(52, 137, 255, 0.16), transparent 29rem),
+				radial-gradient(circle at 92% 82%, rgba(156, 114, 255, 0.12), transparent 25rem),
+				linear-gradient(135deg, #050812 0%, #070b16 48%, #0c1328 100%);
+		}
+
+		body::before {
+			background: linear-gradient(rgba(132, 163, 241, 0.035) 1px, transparent 1px),
+				linear-gradient(90deg, rgba(132, 163, 241, 0.035) 1px, transparent 1px);
+			background-size: 46px 46px;
+			mask-image: linear-gradient(to bottom, black, transparent 78%);
+		}
+
+		body::after,
+		.blob {
+			display: none;
+		}
+
+		.site-header {
+			width: min(100%, 1080px);
+			padding: 48px 0 0;
+		}
+
+		.brand {
+			color: #f3f6ff;
+			font-size: .95rem;
+			font-weight: 600;
+			letter-spacing: .04em;
+		}
+
+		.brand-mark {
+			width: 38px;
+			height: 38px;
+			border-color: rgba(82, 199, 255, 0.5);
+			border-radius: 12px;
+			color: #52c7ff;
+			background: linear-gradient(145deg, rgba(82, 199, 255, 0.18), rgba(156, 114, 255, 0.15));
+			box-shadow: 0 0 24px rgba(82, 199, 255, 0.13);
+		}
+
+		.nav-list a:hover,
+		.nav-list a[aria-current="page"] {
+			border-color: rgba(151, 177, 255, 0.17);
+			color: #f3f6ff;
+		}
 	</style>
 </head>
 <body>
@@ -324,7 +374,7 @@
 			<ul class="nav-list">
 				<li><a href="profil.html">Home</a></li>
 				<li><a href="anggota.html" aria-current="page">Anggota</a></li>
-				<li><a href="tentang.html">Tentang</a></li>
+				<li><a href="kontak.html">Kontak</a></li>
 			</ul>
 		</nav>
 	</header>

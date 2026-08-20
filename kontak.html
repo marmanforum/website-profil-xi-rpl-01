@@ -62,11 +62,15 @@
 		.contact-wrap { width: min(100%, 1080px); }
 
 		.topbar {
+			margin-bottom: 74px;
+			animation: rise 0.7s ease both;
+		}
+
+		.nav {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			margin-bottom: 74px;
-			animation: rise 0.7s ease both;
+			gap: 24px;
 		}
 
 		.brand {
@@ -79,6 +83,32 @@
 			font-weight: 600;
 			letter-spacing: 0.04em;
 			text-decoration: none;
+		}
+
+		.nav-list {
+			display: flex;
+			gap: 8px;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.nav-list a {
+			display: block;
+			padding: 9px 15px;
+			border: 1px solid transparent;
+			border-radius: 10px;
+			color: var(--muted);
+			font-size: .9rem;
+			text-decoration: none;
+			transition: color .3s ease, background .3s ease, border-color .3s ease;
+		}
+
+		.nav-list a:hover,
+		.nav-list a[aria-current="page"] {
+			border-color: var(--line);
+			color: var(--text);
+			background: rgba(255,255,255,.07);
 		}
 
 		.brand-mark {
@@ -246,6 +276,9 @@
 			.page-shell { padding: 28px 17px 36px; align-items: flex-start; }
 			.topbar { margin-bottom: 62px; }
 			.status { display: none; }
+			.nav { align-items: flex-start; flex-direction: column; gap: 16px; }
+			.nav-list { width: 100%; justify-content: space-between; }
+			.nav-list a { padding: 8px 10px; font-size: .82rem; }
 			.contact-card { grid-template-columns: 1fr; gap: 30px; }
 			.card-intro { min-height: auto; gap: 24px; }
 			.orbit { width: 72px; height: 72px; font-size: 1.55rem; }
@@ -260,11 +293,17 @@
 	<main class="page-shell">
 		<div class="contact-wrap">
 			<header class="topbar">
-				<a class="brand" href="profil.html" aria-label="Kembali ke profil XI RPL">
-					<span class="brand-mark"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
-					<span>XI RPL / SMKN 1 GARUT</span>
-				</a>
-				<span class="status">Open to connect</span>
+				<nav class="nav" aria-label="Navigasi utama">
+					<a class="brand" href="profil.html" aria-label="Kembali ke profil XI RPL">
+						<span class="brand-mark">X</span>
+						<span>XI RPL / 01</span>
+					</a>
+					<ul class="nav-list">
+						<li><a href="profil.html">Home</a></li>
+						<li><a href="anggota.html">Anggota</a></li>
+						<li><a href="kontak.html" aria-current="page">Kontak</a></li>
+					</ul>
+				</nav>
 			</header>
 
 			<section class="hero" aria-labelledby="page-title">

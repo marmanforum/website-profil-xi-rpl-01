@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil - XI RPL SMKN 1 Garut</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -13,13 +17,13 @@
         }
 
         :root {
-            --bg: #070b14;
-            --bg-card: rgba(17, 28, 61, 0.72);
-            --blue: #38bdf8;
-            --blue-light: #5ac8fa;
-            --text: #f1f5f9;
-            --muted: #94a3b8;
-            --border: rgba(120, 160, 255, 0.22);
+            --bg: #070b16;
+            --bg-card: rgba(17, 27, 55, 0.68);
+            --blue: #52c7ff;
+            --blue-light: #3489ff;
+            --text: #f3f6ff;
+            --muted: #9da9c7;
+            --border: rgba(151, 177, 255, 0.17);
         }
 
         html {
@@ -28,28 +32,13 @@
 
         body {
             min-height: 100vh;
-            font-family:
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Helvetica,
-                Arial,
-                sans-serif;
+            font-family: "DM Sans", sans-serif;
 
             color: var(--text);
             background:
-                radial-gradient(
-                    circle at 15% 10%,
-                    rgba(18, 76, 145, 0.25),
-                    transparent 32%
-                ),
-                radial-gradient(
-                    circle at 90% 80%,
-                    rgba(83, 49, 160, 0.18),
-                    transparent 35%
-                ),
-                var(--bg);
+                radial-gradient(circle at 10% 10%, rgba(52, 137, 255, 0.16), transparent 29rem),
+                radial-gradient(circle at 92% 82%, rgba(156, 114, 255, 0.12), transparent 25rem),
+                linear-gradient(135deg, #050812 0%, var(--bg) 48%, #0c1328 100%);
 
             position: relative;
             overflow-x: hidden;
@@ -73,26 +62,16 @@
                     transparent 1px
                 );
 
-            background-size: 38px 38px;
-            mask-image: linear-gradient(
-                to bottom,
-                black 0%,
-                rgba(0, 0, 0, 0.75) 65%,
-                transparent 100%
-            );
+            background-size: 46px 46px;
+            mask-image: linear-gradient(to bottom, black, transparent 78%);
         }
 
         /* Ambient glow */
         body::after {
             content: "";
             position: fixed;
-            width: 500px;
-            height: 500px;
-            left: -250px;
-            top: 180px;
-            background: rgba(30, 100, 190, 0.12);
-            filter: blur(120px);
-            border-radius: 50%;
+            width: 0;
+            height: 0;
             pointer-events: none;
         }
 
@@ -103,56 +82,39 @@
         header {
             width: min(100%, 1080px);
             margin: auto;
-            padding: 32px 28px 20px;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            position: relative;
-            z-index: 2;
+            padding: 48px 0 0;
         }
 
         .brand {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 12px;
-
-            color: #e2e8f0;
-            font-size: 14px;
+            gap: 11px;
+            color: var(--text);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.05rem;
             font-weight: 700;
-            letter-spacing: 0.4px;
+            text-decoration: none;
         }
 
         .brand-icon {
-            width: 40px;
-            height: 40px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            border-radius: 10px;
-
+            display: grid;
+            width: 38px;
+            height: 38px;
+            place-items: center;
+            border: 1px solid rgba(82, 199, 255, 0.5);
+            border-radius: 12px;
             color: var(--blue);
-            background: rgba(56, 189, 248, 0.08);
-            border: 1px solid rgba(56, 189, 248, 0.35);
-
-            font-family: monospace;
-            font-size: 15px;
-
-            box-shadow:
-                0 0 25px rgba(56, 189, 248, 0.08),
-                inset 0 0 15px rgba(56, 189, 248, 0.04);
+            background: linear-gradient(145deg, rgba(82, 199, 255, 0.18), rgba(156, 114, 255, 0.15));
+            box-shadow: 0 0 24px rgba(82, 199, 255, 0.13);
+            font-family: "Space Grotesk", sans-serif;
         }
 
         .status {
-            display: flex;
+            display: inline-flex;
+            gap: 8px;
             align-items: center;
-            gap: 9px;
-
-            color: #94a3b8;
-            font-size: 13px;
+            color: var(--muted);
+            font-size: .78rem;
         }
 
         .status-dot {
@@ -161,9 +123,7 @@
             border-radius: 50%;
 
             background: #4ade80;
-            box-shadow:
-                0 0 8px #4ade80,
-                0 0 16px rgba(74, 222, 128, 0.5);
+            box-shadow: 0 0 12px #67e8a4;
         }
 
         /* =========================
@@ -171,29 +131,36 @@
         ========================= */
 
         nav {
-            width: min(100%, 1080px);
-            margin: auto;
-            padding: 0 28px;
-
             display: flex;
-            gap: 28px;
-
-            position: relative;
-            z-index: 2;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
         }
 
-        nav a {
-            color: #64748b;
+        .nav-list {
+            display: flex;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-list a {
+            display: block;
+            padding: 9px 15px;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            color: var(--muted);
+            font-size: .9rem;
             text-decoration: none;
-            font-size: 13px;
-            font-weight: 500;
-
-            transition: 0.25s ease;
+            transition: color .3s ease, background .3s ease, border-color .3s ease;
         }
 
-        nav a:hover,
-        nav a.active {
-            color: var(--blue);
+        .nav-list a:hover,
+        .nav-list a.active {
+            border-color: var(--border);
+            color: var(--text);
+            background: rgba(255,255,255,.07);
         }
 
         /* =========================
@@ -201,9 +168,9 @@
         ========================= */
 
         main {
-            width: min(100%, 1080px);
+            width: min(1120px, calc(100% - 40px));
             margin: auto;
-            padding: 80px 28px 30px;
+            padding: 72px 0 30px;
 
             position: relative;
             z-index: 1;
@@ -304,7 +271,7 @@
 
         .profile-grid {
             display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
+            grid-template-columns: 1fr;
             gap: 60px;
 
             position: relative;
@@ -529,6 +496,29 @@
             }
         }
 
+        @media (max-width: 560px) {
+            header {
+                width: min(100% - 30px, 460px);
+                padding-top: 18px;
+            }
+
+            nav {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .nav-list {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .nav-list a {
+                padding: 8px 10px;
+                font-size: .82rem;
+            }
+        }
+
         @media (max-width: 480px) {
 
             .brand-icon {
@@ -589,6 +579,58 @@
                 height: 40px;
             }
         }
+
+        /* Shared contact-page theme */
+        body {
+            color: #f3f6ff;
+            background:
+                radial-gradient(circle at 10% 10%, rgba(52, 137, 255, 0.16), transparent 29rem),
+                radial-gradient(circle at 92% 82%, rgba(156, 114, 255, 0.12), transparent 25rem),
+                linear-gradient(135deg, #050812 0%, #070b16 48%, #0c1328 100%);
+        }
+
+        body::before {
+            background-image: linear-gradient(rgba(132, 163, 241, 0.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(132, 163, 241, 0.035) 1px, transparent 1px);
+            background-size: 46px 46px;
+            mask-image: linear-gradient(to bottom, black, transparent 78%);
+        }
+
+        body::after {
+            display: none;
+        }
+
+        header {
+            width: min(100%, 1080px);
+            padding: 48px 0 0;
+        }
+
+        .brand {
+            color: #f3f6ff;
+            font-size: .95rem;
+            font-weight: 600;
+            letter-spacing: .04em;
+        }
+
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            border: 1px solid rgba(82, 199, 255, 0.5);
+            border-radius: 12px;
+            color: #52c7ff;
+            background: linear-gradient(145deg, rgba(82, 199, 255, 0.18), rgba(156, 114, 255, 0.15));
+            box-shadow: 0 0 24px rgba(82, 199, 255, 0.13);
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        .nav-list a:hover,
+        .nav-list a.active {
+            border-color: rgba(151, 177, 255, 0.17);
+            color: #f3f6ff;
+        }
     </style>
 </head>
 
@@ -596,26 +638,18 @@
 
     <!-- HEADER -->
     <header>
-
-        <div class="brand">
-            <div class="brand-icon">&lt;/&gt;</div>
-            <span>XI RPL / SMKN 1 GARUT</span>
-        </div>
-
-        <div class="status">
-            <span class="status-dot"></span>
-            <span>Open to connect</span>
-        </div>
-
+        <nav aria-label="Navigasi utama">
+            <a class="brand" href="profil.html">
+                <span class="brand-icon" aria-hidden="true">X</span>
+                <span>XI RPL / 01</span>
+            </a>
+            <ul class="nav-list">
+                <li><a href="profil.html" class="active">Home</a></li>
+                <li><a href="anggota.html">Anggota</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
     </header>
-
-
-    <!-- NAVIGATION -->
-    <nav>
-        <a href="profil.html" class="active">Profil</a>
-        <a href="anggota.html">Anggota Tim</a>
-        <a href="kontak.html">Kontak</a>
-    </nav>
 
 
     <!-- MAIN -->
@@ -640,37 +674,6 @@
 
             <div class="profile-grid">
 
-                <!-- LEFT -->
-                <div class="profile-intro">
-
-                    <div class="icon-circle">
-                        &lt;/&gt;
-                    </div>
-
-                    <h2>
-                        Tentang Kelas Kami.
-                    </h2>
-
-                    <p>
-                        Kami adalah sekelompok developer muda penuh semangat
-                        dari kelas XI Rekayasa Perangkat Lunak (RPL)
-                        SMKN 1 Garut.
-                    </p>
-
-                    <p style="margin-top: 12px;">
-                        Fokus kami adalah mengembangkan kemampuan dalam
-                        teknologi web, aplikasi, database, serta berbagai
-                        ekosistem pengembangan perangkat lunak modern.
-                    </p>
-
-                    <div class="connected">
-                        FUTURE READY
-                    </div>
-
-                </div>
-
-
-                <!-- RIGHT -->
                 <div class="info-list">
 
                     <div class="info-box">
