@@ -24,6 +24,12 @@ Programmer bisa menggunakan kode yang sudah tidak terbaru. Akibatnya, perubahan 
 3. Mengapa main harus dijaga agar tetap stabil?  
 Karena main biasanya menjadi versi utama proyek yang siap digunakan. Jika setiap programmer langsung memasukkan kode yang belum diuji ke main, bisa menyebabkan error dan mengganggu pekerjaan seluruh tim. Karena itu, fitur biasanya dikerjakan di branch masing-masing, diuji terlebih dahulu, baru digabungkan ke main.  
 
+## CODE REVIEW  
+Nama Developer: Muhammad Arman Ramdhan  
+APPROVE  
+  
+  Struktur HTML sudah benar, penamaan file sesuai, kode rapi dan mudah dibaca. Informasi yang ditampilkan lengkap serta sesuai dengan ketentuan tugas. Tidak ditemukan kesalahan yang perlu diperbaiki.
+
 ## Pertanyaan Conflict  
 1. Mengapa conflict terjadi?  
 Conflict terjadi ketika dua programmer mengubah bagian/baris kode yang sama dengan perubahan yang berbeda, sehingga Git tidak bisa menentukan perubahan mana yang harus digunakan.  
@@ -36,3 +42,29 @@ Karena komunikasi membantu programmer menghindari perubahan yang bertabrakan, me
 
 ## URL Repository  
 https://github.com/marmanforum/website-profil-xi-rpl-01.git  
+
+## Refleksi Individu  
+
+1. Apa perbedaan bekerja sendiri dengan bekerja menggunakan Git dan GitHub?  
+Bekerja sendiri lebih sederhana karena tidak perlu menggabungkan hasil pekerjaan dengan orang lain. Sedangkan menggunakan Git dan GitHub memudahkan kerja sama dalam tim, menyimpan riwayat perubahan, dan mengelola versi proyek dengan lebih rapi.  
+
+2. Apa manfaat branch?   
+Branch memungkinkan setiap anggota tim mengerjakan fitur atau perbaikan secara terpisah tanpa mengganggu kode utama. Setelah selesai dan dipastikan benar, perubahan dapat digabungkan ke branch utama.  
+
+3. Mengapa Pull Request diperlukan?  
+Pull Request digunakan agar perubahan dapat diperiksa terlebih dahulu sebelum digabungkan ke branch utama Dengan begitu, kesalahan dapat ditemukan lebih awal dan kualitas kode tetap terjaga.  
+
+4. Apa manfaat Code Review?  
+Code Review membantu menemukan kesalahan, meningkatkan kualitas kode, memastikan hasil sesuai dengan tugas, serta menjadi sarana belajar dari masukan anggota tim.
+
+5. Error apa yang paling sulit kalian selesaikan?  
+Error yang paling sulit saya selesaikan adalah saat terjadi konflik saat menggabungkan perubahan (merge conflict) dan beberapa bagian kode tidak sesuai setelah digabungkan.  
+
+6. Bagaimana kalian menemukan solusinya?  
+Saya membaca pesan error, memeriksa perubahan pada Git, berdiskusi dengan anggota tim, dan mencoba memperbaiki konflik hingga proyek dapat berjalan dengan baik.  
+
+7. Apa kontribusi terbesar kalian dalam kelompok?  
+Kontribusi terbesar saya adalah mengerjakan bagian HTML, membantu memperbaiki kesalahan yang ditemukan saat review, serta memastikan hasil akhir sesuai dengan ketentuan tugas.  
+
+8. Jika menjadi programmer profesional, kebiasaan apa dari kegiatan ini yang akan kalian pertahankan?  
+Saya akan mempertahankan kebiasaan menggunakan Git untuk mencatat setiap perubahan, membuat commit yang jelas, melakukan code review sebelum menggabungkan kode, dan bekerja sama dengan tim secara teratur.  
