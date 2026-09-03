@@ -40,6 +40,10 @@ Programmer atau tim yang bertanggung jawab terhadap kode tersebut yang menentuka
 4. Mengapa komunikasi antar programmer penting?  
 Karena komunikasi membantu programmer menghindari perubahan yang bertabrakan, memahami pekerjaan anggota lain, dan menentukan solusi yang tepat ketika terjadi conflict.  
 
+## Z. Troubleshooting Log:  
+Selama mengerjakan Git dan GitHub, terdapat beberapa masalah yang ditemukan. Pertama, GitHub memiliki commit yang belum ada di laptop sehingga push ditolak; solusinya adalah melakukan `git pull` terlebih dahulu, kemudian melakukan `git push`. Kedua, muncul kondisi tidak ada perubahan baru karena file belum mengalami perubahan sejak commit terakhir; solusinya mengecek dengan `git status`. Ketiga, akun tidak memiliki akses ke repository sehingga tidak dapat melakukan perubahan; solusinya menggunakan akun yang memiliki izin atau meminta akses kepada pemilik repository. Keempat, belum melakukan branch sehingga pekerjaan belum memiliki branch khusus; solusinya membuat branch baru menggunakan `git switch -c nama-branch`. Kelima, push atau merge belum dilakukan sehingga perubahan belum masuk ke repository atau branch `main`; solusinya melakukan `git push`, kemudian membuat Pull Request dan melakukan merge setelah perubahan diperiksa.  
+
+
 ## URL Repository  
 https://github.com/marmanforum/website-profil-xi-rpl-01.git  
 
